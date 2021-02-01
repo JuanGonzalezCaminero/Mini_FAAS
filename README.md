@@ -27,7 +27,7 @@ Establecemos el dominio por defecto:
 Registramos un certificado:
 
 ```
-kumorictl register certificate calccert.wildcard \
+kumorictl register certificate faascert.wildcard \
   --domain *.vera.kumori.cloud \
   --cert-file cert/wildcard.vera.kumori.cloud.crt.wildcard \
   --key-file cert/wildcard.vera.kumori.cloud.key.wildcard
@@ -37,7 +37,7 @@ Regitramos el inbound:
 
 ```kumorictl register http-inbound minifaasinb \
   --domain minifaas-myuser.vera.kumori.cloud \
-  --cert calccert.wildcard
+  --cert faascert.wildcard
   ```
   
 El inbound no funcionará hasta pasado un tiempo debido a los tiempos de propagación de DNS:
