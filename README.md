@@ -55,13 +55,11 @@ Registramos el despliegue:
 \textbf{Nota:} Es importante llamar al despliegue "minifaasdep", ya que el autoscaler utiliza ese nombre para monitorizar el sistema.\\
 Enlazamos el inbound con el despliegue:
 
-```kumorictl link minifaasdep:service minifaasinb
-```
+```kumorictl link minifaasdep:service minifaasinb```
 
 Ahora podemos ejecutar:
 
-```kumorictl describe deployment minifaasdep
-```
+```kumorictl describe deployment minifaasdep```
 
 Para visualizar el estado del sistema.
 
