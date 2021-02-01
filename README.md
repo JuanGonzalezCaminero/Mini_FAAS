@@ -165,9 +165,9 @@ Es posible que el escalado no se produzca inmediatamente al superar el 80\% de c
 
 ```
 curl -k --data-binary '@bucle.js' -H "Content-Type: text/plain" \
-https://minifaas-jgoncam.vera.kumori.cloud/user/faasuser/function/bucle
+https://minifaas-myuser.vera.kumori.cloud/user/faasuser/function/bucle
 bucle added to the system for user faasuser
 
 curl -k -X GET -d '{"args":[]}' -H "Content-Type: text/plain" \
-https://minifaas-jgoncam.vera.kumori.cloud/user/faasuser/function/bucle
+https://minifaas-myuser.vera.kumori.cloud/user/faasuser/function/bucle
 ```
