@@ -66,6 +66,36 @@ Ahora podemos ejecutar:
 
 Para visualizar el estado del sistema.
 
+```
+Deployment : jgoncam/minifaasdep
+Owner : jgoncam@posgrado.upv.es
+Comment : 
+Service : kumori.systems.examples/service/minifaas/0_0_1
+
+State :
++------------+---------------------------+------------+---------+-----+--------+----------+-----+
+| Role       | Instance                  | Container  | Status  | CPU | Memory | Restarts | Age |
++------------+---------------------------+------------+---------+-----+--------+----------+-----+
+| autoscaler | instance-8455957b7c-b28vs |            | Running | 0%  | 0%     |          | 16s |
+|            |                           | autoscaler | Running | 0%  | 0%     | 0        | 13s |
+| database   | instance-0                |            | Running | 0%  | 0%     |          | 16s |
+|            |                           | database   | Running | 0%  | 0%     | 0        | 13s |
+| frontend   |                           |            | Running | 0%  | 0%     |          | 16s |
+|            |                           | frontend   | Running | 0%  | 0%     | 0        | 13s |
+| nats       |                           |            | Running | 0%  | 0%     |          | 16s |
+|            |                           | nats       | Running | 0%  | 0%     | 0        | 13s |
+| worker     |                           |            | Running | 0%  | 0%     |          | 16s |
+|            |                           | worker     | Running | 0%  | 0%     | 0        | 13s |
+|            | instance-1                |            | Running | 0%  | 0%     |          | 12s |
+|            |                           | worker     | Running | 0%  | 0%     | 0        | 9s  |
+|            | instance-2                |            | Running | 0%  | 0%     |          | 7s  |
+|            |                           | worker     | Running | 0%  | 0%     | 0        | 5s  |
++------------+---------------------------+------------+---------+-----+--------+----------+-----+
+
+Links :
+  jgoncam/minifaasdep:service <=> jgoncam/minifaasinb
+  ```
+
 A continuación, vamos al directorio "Ejemplo".
 
 Comenzamos por comprobar que el sistema está activo:
