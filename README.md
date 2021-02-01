@@ -18,7 +18,7 @@ Hacemos login en la plataforma con nuestro usuario:
 
 ```kumorictl login myuser```
 
-\textbf{Nota:} El autoscaler utiliza mis credenciales para realizar la monitorización (jgoncam), por lo que esta funcionalidad no estará disponible si el despliegue se realiza con otro usuario.
+**Nota:** El autoscaler utiliza mis credenciales para realizar la monitorización (jgoncam), por lo que esta funcionalidad no estará disponible si el despliegue se realiza con otro usuario.
 
 Establecemos el dominio por defecto:
 
@@ -55,7 +55,8 @@ kumorictl register deployment minifaasdep \
 --deployment ./cue-manifests/deployment
 ```
 
-\textbf{Nota:} Es importante llamar al despliegue "minifaasdep", ya que el autoscaler utiliza ese nombre para monitorizar el sistema.\\
+**Nota:** Es importante llamar al despliegue "minifaasdep", ya que el autoscaler utiliza ese nombre para monitorizar el sistema.
+
 Enlazamos el inbound con el despliegue:
 
 ```kumorictl link minifaasdep:service minifaasinb```
