@@ -121,7 +121,8 @@ Execution history for faasuser
 Total usage in seconds: 0.000759385
 ```
 
-Para ver el efecto del autoescalado, podemos usar la función bucle, que tarda en ejecutarse unos 8 minutos en un worker en Kumori. Durante la ejecución, podemos ir comprobando mediante el comando kumorictl describe deployment, cómo aumenta el uso de CPU para uno de los workers, y cómo se despliega automáticamente uno nuevo cuando se supera un 80\% de uso de la CPU. Una vez termina la ejecución, podemos observar cómo se elimina el Worker adicional.\\
+Para ver el efecto del autoescalado, podemos usar la función bucle, que tarda en ejecutarse unos 8 minutos en un worker en Kumori. Durante la ejecución, podemos ir comprobando mediante el comando kumorictl describe deployment, cómo aumenta el uso de CPU para uno de los workers, y cómo se despliega automáticamente uno nuevo cuando se supera un 80\% de uso de la CPU. Una vez termina la ejecución, podemos observar cómo se elimina el Worker adicional.
+
 Es posible que el escalado no se produzca inmediatamente al superar el 80\% de carga, y tarde algo más. Esto se debe a que el Autoscaler comprueba la carga cada minuto, y una vez detecta que se ha superado el límite hace login en kumori y despliega el nuevo manifiesto, lo cual lleva un tiempo. En todas las pruebas hasta ahora, el escalado se ha producido mucho antes de que termine esta ejecución de 8 minutos.
 
 ```curl -k --data-binary '@bucle.js' -H "Content-Type: text/plain" \
